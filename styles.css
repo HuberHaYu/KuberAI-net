@@ -583,3 +583,38 @@ h3 {
     transition: none !important;
   }
 }
+
+.download-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.download-row a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 0 13px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--card-strong);
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.download-row a:hover {
+  background: var(--soft);
+  color: var(--primary-strong);
+}
+
+@media (max-width: 560px) {
+  .download-row {
+    justify-content: flex-start;
+  }
+
+  .download-row a {
+    width: 100%;
+  }
+}
