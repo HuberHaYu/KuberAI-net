@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0f172a">
-  <title>KuberAI - 轻量化 AI 模型平台</title>
+  <title>KuberAI - 开源自开发轻量模型</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
@@ -16,8 +16,9 @@
       </a>
 
       <nav class="nav-links" aria-label="主导航">
-        <a href="#vision">平台定位</a>
-        <a href="#building">建设状态</a>
+        <a href="#platform">平台定位</a>
+        <a href="#model">模型示例</a>
+        <a href="#deploy">部署能力</a>
       </nav>
 
       <button class="theme-button" id="themeButton" type="button" aria-label="切换深浅色">
@@ -26,93 +27,99 @@
     </header>
 
     <main>
-      <section class="hero">
-        <div class="hero-content">
-          <p class="eyebrow">Lightweight AI Model Platform</p>
-          <h1>面向轻量化场景的 AI 模型平台</h1>
-          <p class="hero-text">
-            KuberAI 正在构建一个以 mini 模型为核心的平台，聚焦低资源环境、快速部署体验与轻量化 AI 应用落地。
+      <section class="intro" id="platform">
+        <div class="intro-main">
+          <p class="eyebrow">Open-source Lightweight AI Models</p>
+          <h1>KuberAI</h1>
+          <p class="lead">
+            一个面向轻量化部署场景的开源自开发模型项目，专注于 mini 模型、低资源运行和快速集成。
+          </p>
+        </div>
+
+        <div class="intro-side">
+          <div class="info-card">
+            <span>Project Status</span>
+            <strong>Under Construction</strong>
+            <p>网站与模型生态正在持续建设中，当前仅展示项目方向与首个示例模型。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <p class="eyebrow">Focus</p>
+          <h2>把 AI 模型做得更轻、更快、更容易部署</h2>
+        </div>
+
+        <div class="feature-grid">
+          <article>
+            <span>01</span>
+            <h3>开源自开发</h3>
+            <p>KuberAI 模型由项目侧持续研发与维护，面向实际部署场景优化。</p>
+          </article>
+
+          <article>
+            <span>02</span>
+            <h3>Mini 模型优先</h3>
+            <p>优先关注小体积、低占用、快速推理的模型能力，而不是堆叠复杂依赖。</p>
+          </article>
+
+          <article>
+            <span>03</span>
+            <h3>端侧可用</h3>
+            <p>目标覆盖 Android 设备、普通电脑、轻量服务器与主流消费级 GPU。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="model-showcase" id="model">
+        <div class="model-copy">
+          <p class="eyebrow">Featured Model</p>
+          <h2>KuberVR-mini</h2>
+          <p>
+            KuberVR-mini 是 KuberAI 当前展示的人声剔除 / 人声分离轻量模型示例，面向本地音频处理、移动端部署和快速推理场景。
           </p>
 
-          <div class="stats">
-            <div>
-              <strong>Mini</strong>
-              <span>轻量模型方向</span>
-            </div>
-            <div>
-              <strong>Deploy</strong>
-              <span>部署体验优化</span>
-            </div>
-            <div>
-              <strong>Accessible</strong>
-              <span>低配环境适配</span>
-            </div>
-          </div>
+          <a class="primary-button" href="#kuber-vr-mini">查看模型能力</a>
         </div>
 
-        <div class="hero-card" aria-label="KuberAI 建设状态预览">
-          <div class="orb orb-one"></div>
-          <div class="orb orb-two"></div>
-
-          <div class="terminal-card">
-            <div class="terminal-top">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <pre><code>KuberAI Platform
-
-status: under construction
-focus: lightweight models
-goal: simple deployment</code></pre>
+        <div class="model-panel" id="kuber-vr-mini">
+          <div class="panel-top">
+            <span>KuberVR-mini</span>
+            <b>Voice Removal</b>
           </div>
 
-          <div class="model-stack">
-            <article>
-              <span>Lightweight Model Platform</span>
-              <b>Building</b>
-            </article>
-            <article>
-              <span>Deployment Experience</span>
-              <b>Designing</b>
-            </article>
-            <article>
-              <span>Low-resource Adaptation</span>
-              <b>Planning</b>
-            </article>
+          <div class="metric-list">
+            <div>
+              <span>Android 设备</span>
+              <strong>可直接部署</strong>
+            </div>
+            <div>
+              <span>3 分钟歌曲</span>
+              <strong>约 30 秒推理</strong>
+            </div>
+            <div>
+              <span>RTX 3060 / 4060 / 5060</span>
+              <strong>约 3 秒推理</strong>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="section" id="vision">
-        <div class="section-title">
-          <p>Platform Vision</p>
-          <h2>降低 mini 模型的使用门槛</h2>
-        </div>
-
-        <div class="grid">
-          <article class="feature-card">
-            <h3>聚焦轻量化模型</h3>
-            <p>平台方向以 mini 模型为核心，关注模型体积、资源占用、启动速度和部署复杂度。</p>
-          </article>
-
-          <article class="feature-card">
-            <h3>面向低配环境</h3>
-            <p>目标场景包括普通电脑、轻量服务器、本地工具、个人项目和小型 AI 应用。</p>
-          </article>
-
-          <article class="feature-card">
-            <h3>减少部署负担</h3>
-            <p>未来将围绕模型运行、环境配置和服务启动流程进行简化，让部署过程更清晰。</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="status" id="building">
-        <div class="status-light"></div>
+      <section class="deploy-panel" id="deploy">
         <div>
-          <h2>KuberAI 正在建设中</h2>
-          <p>敬请期待</p>
+          <p class="eyebrow">Deployment</p>
+          <h2>面向低资源环境的模型部署体验</h2>
+          <p>
+            KuberAI 将围绕模型运行、端侧部署、推理性能和应用集成持续建设，让轻量模型更容易进入真实产品流程。
+          </p>
+        </div>
+
+        <div class="deploy-tags">
+          <span>Android Deploy</span>
+          <span>Local Inference</span>
+          <span>Mini Models</span>
+          <span>Open Source</span>
         </div>
       </section>
     </main>
