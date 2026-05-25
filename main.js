@@ -21,7 +21,10 @@ function applyTheme(mode) {
     root.setAttribute("data-theme", mode);
   }
 
-  text.textContent = labels[mode];
+  if (text) {
+    text.textContent = labels[mode];
+  }
+
   localStorage.setItem("kuberai-theme", mode);
 }
 
@@ -33,10 +36,12 @@ function nextTheme(mode) {
 let currentTheme = getSavedTheme();
 applyTheme(currentTheme);
 
-button.addEventListener("click", () => {
-  currentTheme = nextTheme(currentTheme);
-  applyTheme(currentTheme);
-});
+if (button) {
+  button.addEventListener("click", () => {
+    currentTheme = nextTheme(currentTheme);
+    applyTheme(currentTheme);
+  });
+}
 
 const coarsePointer = window.matchMedia("(pointer: coarse)").matches;
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -52,3 +57,16 @@ if (!coarsePointer && !reduceMotion) {
     document.body.style.backgroundPosition = `${x * 18}px ${y * 18}px, ${x * -12}px ${y * -12}px, center`;
   });
 }
+
+document.querySelectorAll(".demo-audio").forEach((audio) => {
+  audio.preload = "auto";
+  audio.load();
+
+  audio.addEventListener("play", () => {
+    document.querySelectorAll(".demo-audio").forEach((other) => {
+      if (other !== audio) {
+        other.pause();
+      }
+    });
+  });
+});
