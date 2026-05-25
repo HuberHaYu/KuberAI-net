@@ -17,8 +17,8 @@
 
       <nav class="nav-links" aria-label="主导航">
         <a href="./">首页</a>
-        <a href="#audio">音频示例</a>
-        <a href="#deploy">部署文件</a>
+        <a href="#demo">试听示例</a>
+        <a href="#files">模型文件</a>
       </nav>
 
       <button class="theme-button" id="themeButton" type="button" aria-label="切换深浅色">
@@ -27,114 +27,118 @@
     </header>
 
     <main>
-      <section class="model-detail-hero">
-        <div>
-          <p class="eyebrow">Voice Removal Mini Model</p>
+      <section class="vr-hero">
+        <div class="vr-hero-text">
+          <p class="eyebrow">KuberAI Model</p>
           <h1>KuberVR-mini</h1>
-          <p class="lead">
-            KuberVR-mini 是 KuberAI 自开发的人声剔除 / 人声分离轻量模型，面向 Android、本地工具和中低配设备部署场景，可快速从歌曲中分离人声并得到相对干净的伴奏。
-          </p>
-        </div>
-
-        <div class="detail-card">
-          <span>Model Size</span>
-          <strong>22MB</strong>
-          <p>全量 FP32 模型文件</p>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-head">
-          <p class="eyebrow">Capabilities</p>
-          <h2>轻量、快速、可端侧部署</h2>
-        </div>
-
-        <div class="feature-grid">
-          <article>
-            <span>01</span>
-            <h3>人声剔除 / 分离</h3>
-            <p>从混合音乐中分离人声与伴奏，适合伴奏提取、翻唱制作、音频预处理等场景。</p>
-          </article>
-
-          <article>
-            <span>02</span>
-            <h3>中低配设备可用</h3>
-            <p>模型体积小，推理负担低，能够在普通设备上完成较快的人声分离。</p>
-          </article>
-
-          <article>
-            <span>03</span>
-            <h3>Android ONNX 部署</h3>
-            <p>Android ONNX 部署文件约 7MB，适合移动端集成与本地离线推理。</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="model-showcase" id="deploy">
-        <div class="model-copy">
-          <p class="eyebrow">Deployment Files</p>
-          <h2>部署文件体积</h2>
           <p>
-            KuberVR-mini 优先面向轻量化部署，降低模型文件体积与端侧集成成本。
+            一个轻量级人声剔除 / 人声分离模型，用来从歌曲里分离人声与伴奏。它更适合本地工具、Android 应用和中低配设备，不需要很重的运行环境。
           </p>
         </div>
 
-        <div class="model-panel">
-          <div class="panel-top">
-            <span>KuberVR-mini</span>
-            <b>Lightweight Deploy</b>
+        <div class="vr-summary">
+          <div>
+            <span>模型方向</span>
+            <strong>人声剔除 / 分离</strong>
           </div>
-
-          <div class="metric-list">
-            <div>
-              <span>FP32 全量模型</span>
-              <strong>22MB</strong>
-            </div>
-            <div>
-              <span>Android ONNX 部署文件</span>
-              <strong>7MB</strong>
-            </div>
-            <div>
-              <span>目标设备</span>
-              <strong>中低配设备</strong>
-            </div>
+          <div>
+            <span>部署场景</span>
+            <strong>Android / 本地设备</strong>
+          </div>
+          <div>
+            <span>输出目标</span>
+            <strong>相对干净的伴奏</strong>
           </div>
         </div>
       </section>
 
-      <section class="section" id="audio">
-        <div class="section-head">
-          <p class="eyebrow">Audio Demo</p>
-          <h2>人声剔除音频示例</h2>
+      <section class="vr-section">
+        <div class="vr-section-title">
+          <h2>适合什么场景</h2>
+          <p>KuberVR-mini 不是为了追求庞大的模型规模，而是优先解决“能快速部署、能在普通设备上跑、能得到可用结果”的问题。</p>
         </div>
 
-        <div class="audio-grid">
-          <article class="audio-card">
+        <div class="vr-use-grid">
+          <article>
+            <h3>伴奏提取</h3>
+            <p>从常见歌曲中分离出伴奏，用于翻唱、练歌、剪辑和音频二次处理。</p>
+          </article>
+
+          <article>
+            <h3>移动端集成</h3>
+            <p>Android 设备可直接部署，适合做成本地离线音频处理能力。</p>
+          </article>
+
+          <article>
+            <h3>快速推理</h3>
+            <p>3 分钟歌曲在 Android 设备上约 30 秒完成推理；在主流 NVIDIA RTX 3060 / 4060 / 5060 上约 3 秒完成推理。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="vr-section" id="files">
+        <div class="vr-section-title">
+          <h2>模型文件</h2>
+          <p>文件体积控制在轻量范围内，方便下载、集成和部署。</p>
+        </div>
+
+        <div class="vr-file-list">
+          <div>
+            <span>FP32 全量模型</span>
+            <strong>22MB</strong>
+          </div>
+          <div>
+            <span>Android ONNX 部署文件</span>
+            <strong>7MB</strong>
+          </div>
+          <div>
+            <span>目标设备</span>
+            <strong>中低配设备可用</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="vr-section" id="demo">
+        <div class="vr-section-title">
+          <h2>试听示例</h2>
+          <p>这里预留了日语与英语歌曲示例，每组包含原曲和分离后的伴奏文件。</p>
+        </div>
+
+        <div class="vr-audio-list">
+          <article>
             <h3>日语示例</h3>
 
-            <label>原曲</label>
-            <audio controls preload="none">
-              <source src="./audio/jp-original.mp3" type="audio/mpeg">
-            </audio>
+            <div class="vr-audio-row">
+              <span>原曲</span>
+              <audio controls preload="none">
+                <source src="./audio/jp-original.wav" type="audio/mpeg">
+              </audio>
+            </div>
 
-            <label>伴奏</label>
-            <audio controls preload="none">
-              <source src="./audio/jp-instrumental.mp3" type="audio/mpeg">
-            </audio>
+            <div class="vr-audio-row">
+              <span>伴奏</span>
+              <audio controls preload="none">
+                <source src="./audio/jp-instrumental.mp3" type="audio/mpeg">
+              </audio>
+            </div>
           </article>
 
-          <article class="audio-card">
+          <article>
             <h3>中文示例</h3>
 
-            <label>原曲</label>
-            <audio controls preload="none">
-              <source src="./audio/cn-original.mp3" type="audio/mpeg">
-            </audio>
+            <div class="vr-audio-row">
+              <span>原曲</span>
+              <audio controls preload="none">
+                <source src="./audio/cn-original.wav" type="audio/mpeg">
+              </audio>
+            </div>
 
-            <label>伴奏</label>
-            <audio controls preload="none">
-              <source src="./audio/cn-instrumental.mp3" type="audio/mpeg">
-            </audio>
+            <div class="vr-audio-row">
+              <span>伴奏</span>
+              <audio controls preload="none">
+                <source src="./audio/cn-instrumental.mp3" type="audio/mpeg">
+              </audio>
+            </div>
           </article>
         </div>
       </section>
