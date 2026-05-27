@@ -3,30 +3,112 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101114">
+  <meta name="theme-color" content="#08111f">
   <title>KuberAI</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <div class="fixed-bg"></div>
+  <div class="bg-grid"></div>
+  <div class="bg-glow glow-a"></div>
+  <div class="bg-glow glow-b"></div>
+
+  <header class="site-header">
+    <a class="brand" href="./">
+      <span class="brand-mark">K</span>
+      <span>KuberAI</span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#models">模型</a>
+      <a href="#runtime">部署</a>
+      <a href="#demo">示例</a>
+    </nav>
+
+    <a class="nav-action" href="./kuber-vr-mini.html">查看模型</a>
+  </header>
 
   <main>
-    <section class="intro-stage">
-      <div class="title-wrap" id="titleWrap">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">OPEN-SOURCE MINI AI MODELS</p>
         <h1>Kuber AI</h1>
+        <p class="summary">轻量级 mini 模型部署</p>
+
+        <div class="hero-actions">
+          <a class="primary-button" href="./kuber-vr-mini.html">KuberVR-mini</a>
+          <a class="ghost-button" href="#models">模型记录</a>
+        </div>
       </div>
 
-      <div class="summary-wrap" id="summaryWrap">
-        <p id="summaryText">轻量级mini模型部署</p>
-        <p id="nextSummary">更轻 更快 更便携</p>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+        <div class="core-panel">
+          <div class="core-line"></div>
+          <div class="core-title">LOCAL INFERENCE</div>
+          <div class="core-meter">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="core-tags">
+            <b>ONNX</b>
+            <b>Android</b>
+            <b>FP32</b>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="content-section">
-      <a class="model-link" href="./kuber-vr-mini.html">
-        <span>KuberVR-mini</span>
-        <strong>轻量级人声剔除 / 人声分离模型</strong>
+    <section class="section" id="models">
+      <div class="section-head">
+        <p class="eyebrow">MODELS</p>
+        <h2>当前模型</h2>
+      </div>
+
+      <a class="model-row" href="./kuber-vr-mini.html">
+        <span class="model-index">01</span>
+        <span class="model-name">KuberVR-mini</span>
+        <span class="model-desc">轻量级人声剔除 / 人声分离模型</span>
+        <span class="model-arrow">→</span>
       </a>
+    </section>
+
+    <section class="section runtime-section" id="runtime">
+      <div class="section-head">
+        <p class="eyebrow">DEPLOYMENT</p>
+        <h2>面向本地设备的轻量部署</h2>
+      </div>
+
+      <div class="runtime-grid">
+        <div>
+          <span>Android ONNX</span>
+          <strong>7MB</strong>
+        </div>
+        <div>
+          <span>FP32 模型</span>
+          <strong>22MB</strong>
+        </div>
+        <div>
+          <span>3 分钟歌曲</span>
+          <strong>约 30 秒</strong>
+        </div>
+        <div>
+          <span>RTX 3060 / 4060 / 5060</span>
+          <strong>约 3 秒</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="section demo-section" id="demo">
+      <div class="section-head">
+        <p class="eyebrow">DEMO</p>
+        <h2>音频示例</h2>
+      </div>
+
+      <div class="demo-list">
+        <a href="./kuber-vr-mini.html#demo">查看 KuberVR-mini 试听示例</a>
+      </div>
     </section>
   </main>
 

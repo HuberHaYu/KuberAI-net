@@ -3,127 +3,98 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101114">
+  <meta name="theme-color" content="#08111f">
   <title>KuberVR-mini - KuberAI</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+  <div class="bg-grid"></div>
+  <div class="bg-glow glow-a"></div>
+  <div class="bg-glow glow-b"></div>
+
   <header class="site-header">
-    <a class="brand" href="./" aria-label="KuberAI 首页">
+    <a class="brand" href="./">
       <span class="brand-mark">K</span>
       <span>KuberAI</span>
     </a>
 
-    <nav class="site-nav" aria-label="页面导航">
-      <a href="./">Home</a>
-      <a href="#files">Files</a>
-      <a href="#demo">Demo</a>
+    <nav class="nav-links">
+      <a href="./">首页</a>
+      <a href="#files">文件</a>
+      <a href="#demo">试听</a>
     </nav>
 
-    <button class="theme-button" id="themeButton" type="button" aria-label="切换深浅色">
-      <span id="themeText">自动</span>
-    </button>
+    <a class="nav-action" href="#demo">试听示例</a>
   </header>
 
   <main>
     <section class="model-hero">
-      <p class="eyebrow">KuberAI model</p>
+      <p class="eyebrow">KUBERAI MODEL</p>
       <h1>KuberVR-mini</h1>
-      <p class="lead">
-        A compact voice-removal model for local audio processing
-      </p>
+      <p class="summary">轻量级人声剔除 / 人声分离模型</p>
     </section>
 
-    <section class="detail-line">
-      <div>
-        <span>模型方向</span>
-        <strong>人声剔除 / 分离</strong>
+    <section class="section runtime-section" id="files">
+      <div class="section-head">
+        <p class="eyebrow">FILES</p>
+        <h2>模型文件</h2>
       </div>
-      <div>
-        <span>部署场景</span>
-        <strong>Android / 本地设备</strong>
-      </div>
-      <div>
-        <span>输出目标</span>
-        <strong>相对干净的伴奏</strong>
-      </div>
-    </section>
 
-    <section class="split-section">
-      <div>
-        <p class="eyebrow">Use case</p>
-        <h2>Voice removal model for lightweight deployment</h2>
-      </div>
-      <div class="text-stack">
-        <p>
-          KuberVR-mini 面向本地音频处理流程，重点控制模型体积、推理耗时和部署复杂度。
-        </p>
-        <p>
-          它适合伴奏提取、翻唱练习、剪辑预处理、移动端离线音频处理，也可以作为音频工具链中的基础模块。
-        </p>
+      <div class="runtime-grid">
+        <div>
+          <span>FP32 全量模型</span>
+          <strong>22MB</strong>
+        </div>
+        <div>
+          <span>Android ONNX</span>
+          <strong>7MB</strong>
+        </div>
+        <div>
+          <span>Android 推理</span>
+          <strong>约 30 秒</strong>
+        </div>
+        <div>
+          <span>RTX 推理</span>
+          <strong>约 3 秒</strong>
+        </div>
       </div>
     </section>
 
-    <section class="spec-list" id="files">
-      <div class="section-title">
-        <p class="eyebrow">Files</p>
-        <h2>Model files</h2>
+    <section class="section audio-section" id="demo">
+      <div class="section-head">
+        <p class="eyebrow">DEMO</p>
+        <h2>试听示例</h2>
       </div>
 
-      <div class="spec-row">
-        <span>FP32 全量模型</span>
-        <strong>22MB</strong>
-      </div>
-      <div class="spec-row">
-        <span>Android ONNX 部署文件</span>
-        <strong>7MB</strong>
-      </div>
-      <div class="spec-row">
-        <span>3 分钟歌曲 Android 推理</span>
-        <strong>约 30 秒</strong>
-      </div>
-      <div class="spec-row">
-        <span>RTX 3060 / 4060 / 5060 推理</span>
-        <strong>约 3 秒</strong>
-      </div>
-    </section>
-
-    <section class="demo-section" id="demo">
-      <div class="section-title">
-        <p class="eyebrow">Demo</p>
-        <h2>Audio samples</h2>
-        <p>日语与中文歌曲模型推理示例。在线播放使用压缩版音频，下载提供源文件。</p>
-      </div>
-
-      <div class="audio-block">
+      <div class="audio-group">
         <h3>日语示例</h3>
 
         <div class="audio-row">
           <span>原曲</span>
           <audio class="demo-audio" controls preload="metadata" src="./audio/jp-original.mp3"></audio>
-          <a href="https://raw.githubusercontent.com/HuberHaYu/KuberAI-net/main/audio/jp-original.mp3" download>下载源文件</a>
+          <a href="https://raw.githubusercontent.com/HuberHaYu/KuberAI-net/main/audio/jp-original.mp3" download>下载</a>
         </div>
 
         <div class="audio-row">
           <span>伴奏</span>
           <audio class="demo-audio" controls preload="metadata" src="./audio/jp-instrumental.mp3"></audio>
-          <a href="https://raw.githubusercontent.com/HuberHaYu/KuberAI-net/main/audio/jp-instrumental.mp3" download>下载源文件</a>
+          <a href="https://raw.githubusercontent.com/HuberHaYu/KuberAI-net/main/audio/jp-instrumental.mp3" download>下载</a>
         </div>
       </div>
 
-      <div class="audio-block">
+      <div class="audio-group">
         <h3>中文示例</h3>
 
         <div class="audio-row">
           <span>原曲</span>
           <audio class="demo-audio" controls preload="metadata" src="./audio/cn-original.mp3"></audio>
-          <a href="https://raw.githubusercontent.com/HuberHaYu/KuberAI-net/main/audio/cn-original.mp3" download>下载源文件</a>
+          <a href="https://raw.githubusercontent.com/HuberHaYu/KuberAI-net/main/audio/cn-original.mp3" download>下载</a>
         </div>
 
         <div class="audio-row">
           <span>伴奏</span>
           <audio class="demo-audio" controls preload="metadata" src="./audio/cn-instrumental.mp3"></audio>
-          <a href="https://raw.githubusercontent.com/HuberHaYu/KuberAI-net/main/audio/cn-instrumental.mp3" download>下载源文件</a>
+          <a href="https://raw.githubusercontent.com/HuberHaYu/KuberAI-net/main/audio/cn-instrumental.mp3" download>下载</a>
         </div>
       </div>
     </section>
