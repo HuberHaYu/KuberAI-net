@@ -4,6 +4,7 @@
   --text: #191917;
   --muted: #69645c;
   --accent-soft: rgba(196, 95, 53, 0.12);
+  --title-letter-spacing: -0.04em;
 }
 
 [data-theme="dark"] {
@@ -52,7 +53,7 @@ body {
   margin: 0;
   font-size: clamp(64px, 12vw, 148px);
   line-height: 0.92;
-  letter-spacing: -0.08em;
+  letter-spacing: var(--title-letter-spacing);
   font-family: DengXian, "等线", "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
   font-weight: 700;
 }
