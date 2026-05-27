@@ -3,6 +3,7 @@ const button = document.getElementById("themeButton");
 const text = document.getElementById("themeText");
 
 const modes = ["auto", "light", "dark"];
+
 const labels = {
   auto: "自动",
   light: "浅色",

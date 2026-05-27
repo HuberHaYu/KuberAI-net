@@ -6,10 +6,8 @@
   --line: rgba(25, 25, 23, 0.16);
   --line-strong: rgba(25, 25, 23, 0.32);
   --surface: rgba(255, 252, 245, 0.74);
-  --surface-strong: rgba(255, 252, 245, 0.94);
   --accent: #c45f35;
   --accent-soft: rgba(196, 95, 53, 0.12);
-  --radius: 22px;
   --page: min(1080px, calc(100% - 36px));
 }
 
@@ -20,7 +18,6 @@
   --line: rgba(244, 241, 234, 0.15);
   --line-strong: rgba(244, 241, 234, 0.34);
   --surface: rgba(23, 24, 28, 0.72);
-  --surface-strong: rgba(23, 24, 28, 0.94);
   --accent: #e58a5f;
   --accent-soft: rgba(229, 138, 95, 0.14);
 }
@@ -148,11 +145,11 @@ p {
 }
 
 h1 {
-  max-width: 930px;
+  max-width: 960px;
   margin-bottom: 24px;
-  font-size: clamp(48px, 8vw, 96px);
-  line-height: 0.96;
-  letter-spacing: -0.08em;
+  font-size: clamp(48px, 8vw, 98px);
+  line-height: 0.94;
+  letter-spacing: -0.085em;
 }
 
 h2 {
