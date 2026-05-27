@@ -43,21 +43,6 @@ if (button) {
   });
 }
 
-const coarsePointer = window.matchMedia("(pointer: coarse)").matches;
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-if (!coarsePointer && !reduceMotion) {
-  window.addEventListener("pointermove", (event) => {
-    const x = event.clientX / window.innerWidth;
-    const y = event.clientY / window.innerHeight;
-
-    root.style.setProperty("--mouse-x", `${x}`);
-    root.style.setProperty("--mouse-y", `${y}`);
-
-    document.body.style.backgroundPosition = `${x * 18}px ${y * 18}px, ${x * -12}px ${y * -12}px, center`;
-  });
-}
-
 document.querySelectorAll(".demo-audio").forEach((audio) => {
   audio.preload = "auto";
   audio.load();

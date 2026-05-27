@@ -3,127 +3,89 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0f172a">
-  <title>KuberAI - 开源自开发轻量模型</title>
+  <meta name="theme-color" content="#101114">
+  <title>KuberAI</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <div class="page-shell">
-    <header class="nav">
-      <a class="brand" href="./">
-        <span class="brand-mark">K</span>
-        <span>KuberAI</span>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="KuberAI 首页">
+      <span class="brand-mark">K</span>
+      <span>KuberAI</span>
+    </a>
+
+    <nav class="site-nav" aria-label="页面导航">
+      <a href="#about">关于</a>
+      <a href="#models">模型</a>
+      <a href="#run">运行</a>
+    </nav>
+
+    <button class="theme-button" id="themeButton" type="button" aria-label="切换深浅色">
+      <span id="themeText">自动</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Open-source mini AI models</p>
+      <h1>自己做的小模型，尽量轻一点，跑得快一点。</h1>
+      <p class="lead">
+        KuberAI 是一个个人开源模型项目，主要尝试把 AI 能力做成更小、更容易部署的版本，优先考虑本地运行、Android 集成和普通设备上的实际体验。
+      </p>
+      <div class="hero-actions">
+        <a class="primary-link" href="./kuber-vr-mini.html">查看 KuberVR-mini</a>
+        <a class="plain-link" href="#models">看模型列表</a>
+      </div>
+    </section>
+
+    <section class="split-section" id="about">
+      <div>
+        <p class="eyebrow">About</p>
+        <h2>不是做一个“AI 平台”，只是把一些能落地的小模型慢慢做出来。</h2>
+      </div>
+      <div class="text-stack">
+        <p>
+          这个项目更关注可用性：模型文件不要太大，依赖不要太重，部署流程不要绕。
+        </p>
+        <p>
+          当前方向包括音频处理、端侧推理、轻量模型转换和本地应用集成。网站会随着模型更新继续补内容，不会刻意包装成公司官网。
+        </p>
+      </div>
+    </section>
+
+    <section class="models" id="models">
+      <div class="section-title">
+        <p class="eyebrow">Models</p>
+        <h2>目前公开展示的模型</h2>
+      </div>
+
+      <a class="model-row" href="./kuber-vr-mini.html">
+        <span class="model-name">KuberVR-mini</span>
+        <span class="model-desc">轻量人声剔除 / 人声分离模型</span>
+        <span class="model-meta">Android / 本地推理</span>
       </a>
+    </section>
 
-      <nav class="nav-links" aria-label="主导航">
-        <a href="#platform">平台定位</a>
-        <a href="#model">模型示例</a>
-        <a href="#deploy">部署能力</a>
-      </nav>
+    <section class="run-section" id="run">
+      <p class="eyebrow">Run locally</p>
+      <h2>尽量让模型能在普通设备上跑起来。</h2>
 
-      <button class="theme-button" id="themeButton" type="button" aria-label="切换深浅色">
-        <span id="themeText">自动</span>
-      </button>
-    </header>
-
-    <main>
-      <section class="intro" id="platform">
-        <div class="intro-main">
-          <p class="eyebrow">Open-source Lightweight AI Models</p>
-          <h1>KuberAI</h1>
-          <p class="lead">
-            一个面向轻量化部署场景的开源自开发模型项目，专注于 mini 模型、低资源运行和快速集成。
-          </p>
-        </div>
-
-        <div class="intro-side">
-          <div class="info-card">
-            <span>Project Status</span>
-            <strong>Under Construction</strong>
-            <p>网站与模型生态正在持续建设中，当前仅展示项目方向与首个示例模型。</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-head">
-          <p class="eyebrow">Focus</p>
-          <h2>把 AI 模型做得更轻、更快、更容易部署</h2>
-        </div>
-
-        <div class="feature-grid">
-          <article>
-            <span>01</span>
-            <h3>开源自开发</h3>
-            <p>KuberAI 模型由项目侧持续研发与维护，面向实际部署场景优化。</p>
-          </article>
-
-          <article>
-            <span>02</span>
-            <h3>Mini 模型优先</h3>
-            <p>优先关注小体积、低占用、快速推理的模型能力，而不是堆叠复杂依赖。</p>
-          </article>
-
-          <article>
-            <span>03</span>
-            <h3>端侧可用</h3>
-            <p>目标覆盖 Android 设备、普通电脑、轻量服务器与主流消费级 GPU。</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="model-showcase" id="model">
-        <div class="model-copy">
-          <p class="eyebrow">Featured Model</p>
-          <h2>KuberVR-mini</h2>
-          <p>
-            KuberVR-mini 是 KuberAI 当前展示的人声剔除 / 人声分离轻量模型示例，面向本地音频处理、移动端部署和快速推理场景。
-          </p>
-
-          <a class="primary-button" href="./kuber-vr-mini.html">查看模型能力</a>
-        </div>
-
-        <div class="model-panel" id="kuber-vr-mini">
-          <div class="panel-top">
-            <span>KuberVR-mini</span>
-            <b>Voice Removal</b>
-          </div>
-
-          <div class="metric-list">
-            <div>
-              <span>Android 设备</span>
-              <strong>可直接部署</strong>
-            </div>
-            <div>
-              <span>3 分钟歌曲</span>
-              <strong>约 30 秒推理</strong>
-            </div>
-            <div>
-              <span>RTX 3060 / 4060 / 5060</span>
-              <strong>约 3 秒推理</strong>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="deploy-panel" id="deploy">
+      <div class="run-grid">
         <div>
-          <p class="eyebrow">Deployment</p>
-          <h2>面向低资源环境的模型部署体验</h2>
-          <p>
-            KuberAI 将围绕模型运行、端侧部署、推理性能和应用集成持续建设，让轻量模型更容易进入真实产品流程。
-          </p>
+          <span>Android</span>
+          <strong>可直接部署</strong>
         </div>
-
-        <div class="deploy-tags">
-          <span>Android Deploy</span>
-          <span>Local Inference</span>
-          <span>Mini Models</span>
-          <span>Open Source</span>
+        <div>
+          <span>普通电脑</span>
+          <strong>本地推理</strong>
         </div>
-      </section>
-    </main>
-  </div>
+        <div>
+          <span>RTX 3060 / 4060 / 5060</span>
+          <strong>快速处理</strong>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <script src="./main.js"></script>
 </body>
