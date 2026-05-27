@@ -27,21 +27,31 @@ function updateTitlePosition() {
   const progress = clamp(window.scrollY / 520, 0, 1);
   const eased = 1 - Math.pow(1 - progress, 3);
 
-  const startX = 50;
-  const startY = 50;
-  const endX = 100;
-  const endY = 0;
+  const vw = window.innerWidth;
+  const vh = window.innerHeight;
+
+  const endRight = 50;
+  const endTop = 30;
+
+  title.style.transform = "translate(-50%, -50%) scale(1)";
+  const rect = title.getBoundingClientRect();
+
+  const startX = vw / 2;
+  const startY = vh / 2;
+
+  const scale = 1 - 0.72 * eased;
+  const scaledWidth = rect.width * scale;
+  const scaledHeight = rect.height * scale;
+
+  const endX = vw - endRight - scaledWidth / 2;
+  const endY = endTop + scaledHeight / 2;
 
   const x = startX + (endX - startX) * eased;
   const y = startY + (endY - startY) * eased;
 
-  const scale = 1 - 0.72 * eased;
-  const translateX = -50 + 50 * eased;
-  const translateY = -50 + 50 * eased;
-
-  title.style.left = `${x}%`;
-  title.style.top = `${y}%`;
-  title.style.transform = `translate(calc(${translateX}% - ${24 * eased}px), calc(${translateY}% + ${24 * eased}px)) scale(${scale})`;
+  title.style.left = `${x}px`;
+  title.style.top = `${y}px`;
+  title.style.transform = `translate(-50%, -50%) scale(${scale})`;
 }
 
 applyTheme(getSavedTheme());

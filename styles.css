@@ -70,7 +70,7 @@ body {
   letter-spacing: var(--title-letter-spacing);
   font-weight: 700;
   white-space: nowrap;
-  will-change: transform, left, top, font-size;
+  will-change: transform, left, top;
 }
 
 .home-hero p {
